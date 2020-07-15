@@ -31,8 +31,8 @@ public:
     QLabel *logo;
     QListWidget *listWidget;
     QHBoxLayout *horizontalLayout;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *addCustbtn;
+    QPushButton *addBottels;
     QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -64,11 +64,6 @@ public:
         verticalLayout->addWidget(logo);
 
         listWidget = new QListWidget(centralwidget);
-        QBrush brush(QColor(0, 170, 0, 255));
-        brush.setStyle(Qt::NoBrush);
-        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(listWidget);
-        __qlistwidgetitem->setBackground(brush);
-        new QListWidgetItem(listWidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
 
         verticalLayout->addWidget(listWidget);
@@ -78,15 +73,15 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        addCustbtn = new QPushButton(centralwidget);
+        addCustbtn->setObjectName(QString::fromUtf8("addCustbtn"));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(addCustbtn);
 
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        addBottels = new QPushButton(centralwidget);
+        addBottels->setObjectName(QString::fromUtf8("addBottels"));
 
-        horizontalLayout->addWidget(pushButton_2);
+        horizontalLayout->addWidget(addBottels);
 
 
         verticalLayout_2->addLayout(horizontalLayout);
@@ -106,17 +101,8 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         logo->setText(QCoreApplication::translate("MainWindow", "Ahmad Brothers Water Point", nullptr));
-
-        const bool __sortingEnabled = listWidget->isSortingEnabled();
-        listWidget->setSortingEnabled(false);
-        QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
-        ___qlistwidgetitem->setText(QCoreApplication::translate("MainWindow", "Salman, 123A, lahore", nullptr));
-        QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
-        ___qlistwidgetitem1->setText(QCoreApplication::translate("MainWindow", "Ghulam, mustafa town lahore", nullptr));
-        listWidget->setSortingEnabled(__sortingEnabled);
-
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Add Customer", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Add Bottels", nullptr));
+        addCustbtn->setText(QCoreApplication::translate("MainWindow", "Add Customer", nullptr));
+        addBottels->setText(QCoreApplication::translate("MainWindow", "Add Bottels", nullptr));
     } // retranslateUi
 
 };

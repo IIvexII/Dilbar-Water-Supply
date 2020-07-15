@@ -40,42 +40,22 @@ QListWidget:item{
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QListWidget" name="listWidget">
-        <item>
-         <property name="text">
-          <string>Salman, 123A, lahore</string>
-         </property>
-         <property name="background">
-          <brush brushstyle="NoBrush">
-           <color alpha="255">
-            <red>0</red>
-            <green>170</green>
-            <blue>0</blue>
-           </color>
-          </brush>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Ghulam, mustafa town lahore</string>
-         </property>
-        </item>
-       </widget>
-      </item>
      </layout>
+    </item>
+    <item>
+     <widget class="QTableView" name="tableView"/>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="addCustbtn">
         <property name="text">
          <string>Add Customer</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="addBottels">
         <property name="text">
          <string>Add Bottels</string>
         </property>

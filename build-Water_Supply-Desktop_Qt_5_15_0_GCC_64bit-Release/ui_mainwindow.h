@@ -12,11 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -29,17 +30,22 @@ public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QLabel *logo;
-    QListWidget *listWidget;
+    QTableView *tableView;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label;
+    QLabel *label_2;
     QHBoxLayout *horizontalLayout;
     QPushButton *addCustbtn;
+    QPushButton *pushButton_2;
     QPushButton *addBottels;
+    QPushButton *pushButton;
     QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(656, 414);
+        MainWindow->resize(670, 462);
         MainWindow->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	qproperty-alignment: AlignCenter;\n"
 "}\n"
@@ -63,13 +69,32 @@ public:
 
         verticalLayout->addWidget(logo);
 
-        listWidget = new QListWidget(centralwidget);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
-
-        verticalLayout->addWidget(listWidget);
-
 
         verticalLayout_2->addLayout(verticalLayout);
+
+        tableView = new QTableView(centralwidget);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
+
+        verticalLayout_2->addWidget(tableView);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        QFont font1;
+        font1.setPointSize(20);
+        label->setFont(font1);
+
+        horizontalLayout_2->addWidget(label);
+
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font1);
+
+        horizontalLayout_2->addWidget(label_2);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_2);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
@@ -78,10 +103,20 @@ public:
 
         horizontalLayout->addWidget(addCustbtn);
 
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        horizontalLayout->addWidget(pushButton_2);
+
         addBottels = new QPushButton(centralwidget);
         addBottels->setObjectName(QString::fromUtf8("addBottels"));
 
         horizontalLayout->addWidget(addBottels);
+
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        horizontalLayout->addWidget(pushButton);
 
 
         verticalLayout_2->addLayout(horizontalLayout);
@@ -89,7 +124,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 656, 22));
+        menubar->setGeometry(QRect(0, 0, 670, 22));
         MainWindow->setMenuBar(menubar);
 
         retranslateUi(MainWindow);
@@ -101,8 +136,12 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         logo->setText(QCoreApplication::translate("MainWindow", "Ahmad Brothers Water Point", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Total Bottels: ", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         addCustbtn->setText(QCoreApplication::translate("MainWindow", "Add Customer", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Delete Customer", nullptr));
         addBottels->setText(QCoreApplication::translate("MainWindow", "Add Bottels", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Load Table", nullptr));
     } // retranslateUi
 
 };

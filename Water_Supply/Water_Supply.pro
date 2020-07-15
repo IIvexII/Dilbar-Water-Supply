@@ -16,16 +16,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addbottels.cpp \
     addcustomer.cpp \
+    deletecustomer.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    addbottels.h \
     addcustomer.h \
+    deletecustomer.h \
     mainwindow.h
 
 FORMS += \
+    addbottels.ui \
     addcustomer.ui \
+    deletecustomer.ui \
     mainwindow.ui
 
 # Default rules for deployment.

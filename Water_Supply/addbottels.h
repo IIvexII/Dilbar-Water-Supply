@@ -2,6 +2,9 @@
 #define ADDBOTTELS_H
 
 #include <QDialog>
+#include <QtSql>
+#include <QSqlDatabase>
+#include <QMessageBox>
 
 namespace Ui {
 class addBottels;
@@ -14,6 +17,10 @@ class addBottels : public QDialog
 public:
     explicit addBottels(QWidget *parent = nullptr);
     ~addBottels();
+
+private slots:
+
+    void on_pushButton_clicked();
 
 private:
     Ui::addBottels *ui;

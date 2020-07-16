@@ -32,8 +32,6 @@ void deleteCustomer::on_pushButton_clicked()
         qry.bindValue(":id", id);
 
         qry.exec();
-
-        connect(this, SIGNAL(closeWindow()), this, SLOT(close()));
     }
     else{
         QMessageBox::warning(this, "Error", "Faild to connect to database");

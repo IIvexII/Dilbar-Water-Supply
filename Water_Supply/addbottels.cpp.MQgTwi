@@ -24,22 +24,8 @@ void addBottels::on_pushButton_clicked()
     sqlitedb.open();
 
     if(sqlitedb.isOpen()){
-        QSqlQuery qry;
-        int amount = 0;
-        QString total;
-        qry.prepare(QString("SELECT total FROM Bottels;"));
-
-        if(!qry.exec()){
-            QMessageBox::warning(this, "Error", "Unable to fetch from database.");
-        }
-        else{
-            while(qry.next())
-                amount = qry.value(0).toInt();
-        }
-
-        total = QString::number(ui->lineEdit->text().toInt() + amount);
-      qry.prepare("UPDATE Bottels SET total = '"+ total + "';");
-      qry.exec();
+      QSqlQuery qry;
+      qry.prepare("UPDATE Bottels SET total = '"+ ui->lineEdit->text()+';");
     }
 
     sqlitedb.close();

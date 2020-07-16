@@ -29,17 +29,19 @@ void addCustomer::on_addbtn_clicked()
             QString address = ui->addressField->text();
             QString compeny = ui->compenyField->text();
             QString price = ui->priceField->text();
+            QString usage = ui->usageField->text();
 
             // Making Query
             QSqlQuery qry;
 
-            qry.prepare("INSERT INTO customers (name, address, compeny, price, deliver, total_amount)"
-                        "VALUES (:name, :address, :compeny, :price, 0, 0)");
+            qry.prepare("INSERT INTO customers (name, address, compeny, price, deliver, total_amount, usage_days)"
+                        "VALUES (:name, :address, :compeny, :price, 0, 0, :usage)");
 
             qry.bindValue(":name", name);
             qry.bindValue(":address", address);
             qry.bindValue(":compeny", compeny);
             qry.bindValue(":price", price);
+            qry.bindValue(":usage", usage);
 
             // Trying to execute query.
             if(qry.exec()){

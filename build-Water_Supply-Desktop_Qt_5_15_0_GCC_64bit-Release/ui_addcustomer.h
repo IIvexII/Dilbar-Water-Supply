@@ -32,6 +32,8 @@ public:
     QLineEdit *compenyField;
     QLabel *label_4;
     QLineEdit *priceField;
+    QLabel *label_5;
+    QLineEdit *usageField;
     QHBoxLayout *horizontalLayout;
     QPushButton *addbtn;
     QPushButton *closebtn;
@@ -40,7 +42,7 @@ public:
     {
         if (addCustomer->objectName().isEmpty())
             addCustomer->setObjectName(QString::fromUtf8("addCustomer"));
-        addCustomer->resize(540, 412);
+        addCustomer->resize(540, 553);
         verticalLayout = new QVBoxLayout(addCustomer);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label = new QLabel(addCustomer);
@@ -95,6 +97,18 @@ public:
 
         verticalLayout->addWidget(priceField);
 
+        label_5 = new QLabel(addCustomer);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setFont(font);
+
+        verticalLayout->addWidget(label_5);
+
+        usageField = new QLineEdit(addCustomer);
+        usageField->setObjectName(QString::fromUtf8("usageField"));
+        usageField->setFont(font1);
+
+        verticalLayout->addWidget(usageField);
+
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         addbtn = new QPushButton(addCustomer);
@@ -126,6 +140,7 @@ public:
         label_2->setText(QCoreApplication::translate("addCustomer", "Address", nullptr));
         label_3->setText(QCoreApplication::translate("addCustomer", "Compeny", nullptr));
         label_4->setText(QCoreApplication::translate("addCustomer", "Price", nullptr));
+        label_5->setText(QCoreApplication::translate("addCustomer", "Usage Days", nullptr));
         addbtn->setText(QCoreApplication::translate("addCustomer", "Add", nullptr));
         closebtn->setText(QCoreApplication::translate("addCustomer", "Close", nullptr));
     } // retranslateUi

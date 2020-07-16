@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>540</width>
-    <height>412</height>
+    <height>553</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -91,6 +91,27 @@
    </item>
    <item>
     <widget class="QLineEdit" name="priceField">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_5">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Usage Days</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="usageField">
      <property name="font">
       <font>
        <pointsize>20</pointsize>

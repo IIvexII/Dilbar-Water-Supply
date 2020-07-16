@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>670</width>
-    <height>462</height>
+    <width>868</width>
+    <height>570</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@ QListWidget:item{
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -43,7 +43,48 @@ QListWidget:item{
      </layout>
     </item>
     <item>
-     <widget class="QTableView" name="tableView"/>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QTableView" name="tableView"/>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Delivery</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_4"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QPushButton" name="deliveryBtn">
+             <property name="text">
+              <string>Delivered!</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="text">
+              <string>Reset</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -76,6 +117,20 @@ QListWidget:item{
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Load Table</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addBottels">
+        <property name="text">
+         <string>Add Bottels</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="addCustbtn">
         <property name="text">
          <string>Add Customer</string>
@@ -90,16 +145,9 @@ QListWidget:item{
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="addBottels">
+       <widget class="QPushButton" name="pushButton_4">
         <property name="text">
-         <string>Add Bottels</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>Load Table</string>
+         <string>Blacklist</string>
         </property>
        </widget>
       </item>
@@ -112,7 +160,7 @@ QListWidget:item{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>670</width>
+     <width>868</width>
      <height>22</height>
     </rect>
    </property>
